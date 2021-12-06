@@ -1,1 +1,1 @@
-export function fetchWithTimeout(delay)
+export function fetchWithTimeout(delay) {}
