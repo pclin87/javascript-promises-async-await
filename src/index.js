@@ -6,4 +6,6 @@ export function fetchMovies() {
 }
 
 const moviePromise = fetchMovies()
-moviePromise.then(results => console.log(results))
+moviePromise.then(results => {
+    console.log(results)
+})
