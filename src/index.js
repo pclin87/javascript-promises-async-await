@@ -1,4 +1,4 @@
-import { fetchWithTimeout, fetchMovies, fetchBooks } from './services'
+import { fetchWithTimeout, fetchMovies, fetchBooks, asyncFetchBooks, asyncFetchBooks } from './services'
 const movies = require('./data/movies.json')
 
 
@@ -26,3 +26,11 @@ const getBooksOrMoviesPromise = getBooksOrMovies()
 getBooksOrMoviesPromise.then(results => {
     console.log('getBooksOrMoviesPromise', results)
 })
+
+async function getBooksAndMoviesAsync() {
+    try {
+        
+    } catch (error) {
+        console.log("Error fetching books and movies", error)
+    }
+}
