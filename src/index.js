@@ -41,7 +41,7 @@ async function getBooksOrMoviesAsync() {
         const values = await Promise.race([asyncFetchBooks(), asyncFetchMovies()])
         return values
     } catch (error) {
-        console.log("Error waiting for the promise race", error)
+        console.error("Error waiting for the promise race", error)
     }
 }
 
@@ -52,8 +52,9 @@ getBooksAndMoviesAsync().then(results => {
       });
 })
 
-getBooksOrMoviesAsync().then(results => {
-    console.log("movies OR books", {
-        results
-      });
+getBooksOrMoviesAsync()
+    .then(results => {
+        console.log("movies OR books", {
+            results
+        });
 })
