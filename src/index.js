@@ -57,3 +57,5 @@ getBooksOrMoviesAsync()
       results
     });
   })
+
+  const timer1 = setTimeout(console.log("timer 1 has finished", 3000))
